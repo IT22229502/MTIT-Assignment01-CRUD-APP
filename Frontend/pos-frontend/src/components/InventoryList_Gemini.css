@@ -1,0 +1,243 @@
+/* Base Reset & Background */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #0f1013;
+  /* Dark background */
+  padding: 20px;
+}
+
+/* Glass Card Design */
+.inventory-card {
+  width: 100%;
+  /* Use 90% of the screen width */
+  max-width: 1100px;
+  /* Allow it to grow much wider than before */
+  margin: 0 auto;
+  background: rgba(30, 32, 38, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+/* Header Section */
+.card-header {
+  padding: 25px 35px;
+  display: flex;
+  justify-content: space-between;
+  /* Pushes Title Left and Refresh Right */
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.card-header h1 {
+  color: #f6fcff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.header-stats-row {
+  display: flex;
+  gap: 40px;
+  /* Space between the three stats */
+}
+
+.mini-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mini-stat .label {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #8a8d98;
+  letter-spacing: 1px;
+}
+
+.mini-stat .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mini-stat .value.warning {
+  color: #ef4444;
+}
+
+.mini-stat .value.success {
+  color: #10b981;
+}
+
+/* Fixed Product ID styling */
+.product-id {
+  font-size: 11px;
+  color: #4b4e59;
+  margin-top: 2px;
+}
+
+.subtitle {
+  color: #bebebe;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.refresh-btn {
+  background: #2a2d35;
+  color: #fff;
+  border: 1px solid #3e424b;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.refresh-btn:hover {
+  background: #3e424b;
+}
+
+/* Table Styling */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e8fcff;
+}
+
+.modern-table th {
+  text-align: left;
+  padding: 16px 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #8a8d98;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modern-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  vertical-align: middle;
+}
+
+.modern-table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Custom Data Components */
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.name-text {
+  font-weight: 500;
+  color: #f7f9fa;
+}
+
+.price-text {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.stock-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.stock-indicator.critical {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+/* Action Buttons */
+.action-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.action-btn.delete {
+  background: transparent;
+  color: #8a8d98;
+  border: 1px solid #3e424b;
+}
+
+.action-btn.delete:hover {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Footer */
+.card-footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #4b4e59;
+}
+
+/* Loading Spinner */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #8a8d98;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(99, 102, 241, 0.1);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
